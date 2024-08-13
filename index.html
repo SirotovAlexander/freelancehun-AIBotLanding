@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BusinessAI</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="./styles/styles.css" /> -->
+  </head>
+  <body>
+    <header>
+      <div class="container header--flex">
+        <a href="index.html" class="logo"><span class="logo__firstpart">Business</span>AI</a>
+        <nav>
+          <ul class="list nav-links">
+            <li>
+              <a href="#robotAbout" class="nav-links__item nav-links__item--current"
+                >Що таке бот?</a
+              >
+            </li>
+            <li><a href="#advSec" class="nav-links__item">Переваги використання</a></li>
+            <li><a href="#exmplSec" class="nav-links__item fix-link">Приклади</a></li>
+            <li><a href="#teamSec" class="nav-links__item fix-link">Наша команда</a></li>
+          </ul>
+        </nav>
+        <button class="open-burger__button js-open-menu" type="button">
+          <svg class="open-button" width="40" height="40">
+            <use href="./images/icons.svg#icon-open-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__logo">
+            Потужний ШІ Чат-Бот для Вашого Бізнесу - це ефективна автоматизація та задоволені
+            клієнти
+          </h1>
+          <button type="button" class="hero__button" data-modal-open>
+            <span class="hero__text">Зв'яжіться з нами</span>
+          </button>
+        </div>
+      </section>
+      <!-- Robot SECTION -->
+      <section class="section" id="robotAbout">
+        <div class="container robot-container">
+          <div class="robotIMG-wrapper">
+            <p class="robotIMG-text">
+              Чат-бот для бізнесу — це програмне забезпечення, яке використовує штучний інтелект
+              (ШІ) для спілкування з клієнтами через текстові або голосові повідомлення. Він може
+              працювати як на вебсайті, так і в месенджерах, соціальних мережах чи мобільних
+              додатках. Основна мета чат-бота — автоматизувати взаємодію з клієнтами, забезпечуючи
+              їм оперативні відповіді та підтримку.
+            </p>
+          </div>
+          <div class="robotIMG-box">
+            <img
+              class="robot-IMG"
+              src="./images/Cartoon_Style_Robot__1_-removebg-preview.png"
+              alt="робот"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Our advantages section  -->
+      <section class="section advantages" id="advSec">
+        <h2 class="visually-hidden">###</h2>
+        <div class="container">
+          <ul class="list advantages--flex">
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-antenna"></use>
+                </svg>
+              </div>
+              <h3 class="advantages__topic">ЗБІР ТА АНАЛІЗ ДАНИХ</h3>
+              <p class="advantages__text">
+                Чат-боти збирають інформацію про запити та поведінку клієнтів, що дозволяє краще
+                розуміти їхні потреби і вдосконалювати бізнес-процеси.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-clock"></use>
+                </svg>
+              </div>
+              <h3 class="advantages__topic">ЦІЛОДОБОВА ПІДТРИМКА КЛІЄНТІВ</h3>
+              <p class="advantages__text">
+                Чат-боти працюють 24/7, що дозволяє вашим клієнтам отримувати відповіді на запитання
+                в будь-який час доби. Це підвищує рівень обслуговування та задоволеності клієнтів.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
+              <h3 class="advantages__topic">ШВИДКА ОБРОБКА ЗАПИТІВ</h3>
+              <p class="advantages__text">
+                Завдяки ІІ чат-бот може миттєво відповідати на запити клієнтів, обробляючи великий
+                обсяг інформації та знижуючи навантаження на вашу команду підтримки.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+              <h3 class="advantages__topic">ІНТЕГРАЦІЯ З ІНШИМИ CRM СИСТЕМАМИ</h3>
+              <p class="advantages__text">
+                Інтеграція з іншими системами Чат-боти легко інтегруються з CRM-системами, базами
+                даних та іншими інструментами, що спрощує управління взаємодією з клієнтами та
+                робить її більш ефективною.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Exampless -->
+      <section class="section" id="exmplSec">
+        <h2 class="topic-promo">Приклади використання ботів</h2>
+        <div class="container">
+          <ul class="list topic-promo__image">
+            <li>
+              <div class="thumb">
+                <img src="./images/2-2.png" alt="Процес верстання сайту" width="370" height="294" />
+              </div>
+            </li>
+            <li>
+              <div class="thumb">
+                <img
+                  src="./images/chatbot-best-practices-1.png"
+                  alt="Адаптація під смартфон"
+                  width="370"
+                  height="294"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="thumb">
+                <img
+                  src="./images/clinica.png"
+                  alt="Робота з оформлення сайту"
+                  width="370"
+                  height="294"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Our team section-->
+      <section class="section team" id="teamSec">
+        <div class="container">
+          <h2 class="team__logo">Наша команда</h2>
+          <ul class="list team__list">
+            <li class="team__card">
+              <img
+                class="team__png"
+                srcset="
+                  ./images/member1-270.jpg 270w,
+                  ./images/member1-354.jpg 354w,
+                  ./images/member1-450.jpg 450w
+                "
+                sizes="(min-width: 480px) 450px, (min-width: 780px) 354px, (min-width: 1200) 270px)"
+                src="./images/member1-270.jpg"
+                alt="Перший член команди"
+              />
+              <div class="team__wrapper">
+                <h3 class="team__topic">Ігор Дем'яненко</h3>
+                <p lang="en" class="team__text">Product Designer</p>
+                <ul class="list social-media-list">
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg class="social-media-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="team__card">
+              <img
+                class="team__png"
+                srcset="
+                  ./images/member2-270.jpg 270w,
+                  ./images/member2-354.jpg 354w,
+                  ./images/member2-450.jpg 450w
+                "
+                sizes="(min-width: 480px) 450px, (min-width: 780px) 354px, (min-width: 1200) 270px)"
+                src="./images/member2-270.jpg"
+                alt="Другий член команди"
+              />
+              <div class="team__wrapper">
+                <h3 class="team__topic">Ольга Рєпіна</h3>
+                <p lang="en" class="team__text">Frontend Developer</p>
+                <ul class="list social-media-list">
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg class="social-media-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="team__card">
+              <img
+                class="team__png"
+                srcset="
+                  ./images/member3-270.jpg 270w,
+                  ./images/member3-354.jpg 354w,
+                  ./images/member3-450.jpg 450w
+                "
+                sizes="(min-width: 480px) 450px, (min-width: 780px) 354px, (min-width: 1200) 270px)"
+                src="./images/member3-270.jpg"
+                alt="Третій член команди"
+              />
+              <div class="team__wrapper">
+                <h3 class="team__topic">Микола Тарасов</h3>
+                <p lang="en" class="team__text">Marketing</p>
+                <ul class="list social-media-list">
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg class="social-media-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="team__card">
+              <img
+                class="team__png"
+                srcset="
+                  ./images/member4-270.jpg 270w,
+                  ./images/member4-354.jpg 354w,
+                  ./images/member4-450.jpg 450w
+                "
+                sizes="(min-width: 480px) 450px, (min-width: 780px) 354px, (min-width: 1200) 270px)"
+                src="./images/member4-270.jpg"
+              />
+
+              <div class="team__wrapper">
+                <h3 class="team__topic">Михайло Єрмаков</h3>
+                <p lang="en" class="team__text">UI Designer</p>
+                <ul class="list social-media-list">
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg class="social-media-icons" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li class="social-media-list__item">
+                    <a href="#" class="social-media-list__link"
+                      ><svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__wrapper">
+          <a href="index.html" class="footer__logo"
+            ><span class="footer__logo--color">Business</span>AI</a
+          >
+          <button type="button" class="hero__button" data-modal-open>
+            <span class="hero__text">Зв'яжіться з нами</span>
+          </button>
+          <address>
+            <ul class="list address-centering">
+              <li class="footer__list">
+                <a
+                  href="https://goo.gl/maps/z9Qv3HFJrDV9PnVbA"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="footer__address"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="footer__list">
+                <a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a>
+              </li>
+              <li class="footer__list">
+                <a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <!-- <div>
+          <p class="link-footer-logo">приєднуйтесь</p>
+          <ul class="list social-media-list social-media-list--fix">
+            <li class="social-media-list__item social-media-list__item--theme">
+              <a href="#" class="social-media-list__link social-media-list__link--position"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="social-media-list__item social-media-list__item--theme">
+              <a href="#" class="social-media-list__link social-media-list__link--position"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li class="social-media-list__item social-media-list__item--theme">
+              <a href="#" class="social-media-list__link social-media-list__link--position"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="social-media-list__item social-media-list__item--theme">
+              <a href="#" class="social-media-list__link social-media-list__link--position"
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div> -->
+        <!-- <form name="footer-email-form" class="footer-form">
+          <label for="footer-email-area" class="footer-form__lable">Підпишіться на розсилку</label>
+          <div class="footer-form__wrapper">
+            <input
+              class="footer-form__input"
+              name="place-for-mail"
+              type="text"
+              id="footer-email-area"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer-form__button">
+              <span>Підписатися</span>
+              <svg class="footer-form__img" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form> -->
+      </div>
+    </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__button" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+        <h2 class="modal__logo">Залиште свої дані, ми вам передзвонимо</h2>
+
+        <form name="modal-form" class="modal-form">
+          <label for="name" class="modal__lable">Ім'я</label>
+          <div class="modal__input-wrapper">
+            <input name="name" type="text" id="name" class="modal__input" />
+            <svg width="18" height="18" class="modal__icon">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+
+          <label for="phone" class="modal__lable">Телефон</label>
+          <div class="modal__input-wrapper">
+            <input name="phone" type="tel" id="phone" class="modal__input" />
+            <svg width="18" height="18" class="modal__icon">
+              <use href="./images/icons.svg#icon-modal-phone"></use>
+            </svg>
+          </div>
+
+          <label for="email" class="modal__lable">Пошта</label>
+          <div class="modal__input-wrapper">
+            <input name="email" type="email" id="email" class="modal__input" />
+            <svg width="18" height="18" class="modal__icon">
+              <use href="./images/icons.svg#icon-modal-mail"></use>
+            </svg>
+          </div>
+
+          <label for="telegram" class="modal__lable">Телеграм</label>
+          <div class="modal__input-wrapper">
+            <input name="telegram" id="telegram" class="modal__input" />
+            <svg width="18" height="18" class="modal__icon">
+              <use href="./images/symbol-defs.svg#icon-compass"></use>
+            </svg>
+          </div>
+
+          <label for="coment" class="modal__coment-lable">Коментар</label>
+          <textarea
+            class="modal__textarea"
+            name="coment"
+            id="coment"
+            cols="30"
+            rows="10"
+            placeholder="Введіть текст"
+          ></textarea>
+          <!-- <div class="checkbox">
+            <input type="checkbox" id="checkbox" name="conditions" />
+            <div class="checkbox__svg">
+              <svg width="14" height="10">
+                <use href="./images/icons.svg#icon-check-svg"></use>
+              </svg>
+            </div>
+            <label for="checkbox"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="#" class="checkbox__link">Умови договору</a></label
+            >
+          </div> -->
+
+          <button type="submit" class="modal__submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <!-- BURGER-MENUE -->
+    <div class="burger-menu js-menu-container">
+      <button class="burger-menu__button js-close-menu" type="button">
+        <svg class="burger-menu__close-svg" width="40" height="40">
+          <use href="./images/icons.svg#icon-burger-close"></use>
+        </svg>
+      </button>
+      <ul class="burger-list list">
+        <li class="burger-list__item">
+          <a class="burger-list__nav" href="#robotAbout">Що таке бот?</a>
+        </li>
+        <li class="burger-list__item">
+          <a class="burger-list__nav" href="#advSec">Переваги використання</a>
+        </li>
+        <!-- <li class="burger-list__item"><a class="burger-list__nav" href="#exmplSec">Приклади</a></li> -->
+        <li class="burger-list__item">
+          <a class="burger-list__nav" href="#teamSec">Наша команда</a>
+        </li>
+      </ul>
+      <!-- <div class="burger-wrapper">
+        <ul class="burger-contact list">
+          <li class="burger-contact__item burger-contact__item--margin">
+            <a class="burger-contact__info burger-contact__info--mod" href="tell:+38 096 111 11 11"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="burger-contact__item">
+            <a class="burger-contact__info" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="burger-social list">
+          <li class="burger-social__item"><a class="burger-social__link" href="#">Instagram</a></li>
+          <li class="burger-social__item"><a class="burger-social__link" href="#">Twitter</a></li>
+          <li class="burger-social__item"><a class="burger-social__link" href="#">Facebook</a></li>
+          <li class="burger-social__item"><a class="burger-social__link" href="#">LinkedIn</a></li>
+        </ul>
+      </div> -->
+    </div>
+    <script type="module" src="./JS/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./JS/modal.js"></script>
+
+    <script type="module" src="./JS/tgSend.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+.logo {
+  color: var(--black-logo);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  margin-right: 93px;
+  &__firstpart {
+    color: var(--button-color);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 0;
+  }
+}

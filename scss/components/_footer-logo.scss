@@ -1,0 +1,13 @@
+.footer__logo {
+  color: var(--main-background-color-second);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  display: inline-block;
+
+  &--color {
+    color: var(--button-color);
+  }
+}

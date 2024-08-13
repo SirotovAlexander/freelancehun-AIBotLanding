@@ -1,0 +1,33 @@
+.robot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+
+        }
+}
+
+
+.robotIMG-wrapper {
+    min-width: 360px;
+    width: 100%;
+
+        .robotIMG-text {
+                color: var(--topic-color);
+                font-size: 20px;
+                line-height: 1.14;
+                text-align: justify;
+            }
+}
+
+.robotIMG-box {
+    max-width: 400px;
+    height: 400px;
+}
